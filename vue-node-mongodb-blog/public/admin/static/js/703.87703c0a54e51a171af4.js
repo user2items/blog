@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwall_blog=self.webpackChunkwall_blog||[]).push([[703],{18703:(l,t,e)=>{e.r(t),e.d(t,{default:()=>n});const n=(0,e(51900).Z)({},(function(){var l=this.$createElement,t=this._self._c||l;return t("div",{staticClass:"content-wrapper"},[t("transition",[t("router-view")],1)],1)}),[],!1,null,null,null).exports}}]);
