@@ -20,9 +20,9 @@ export default {
   auth,
   log,
   mongodb: {
-    username: 'wall',
+    username: 'qunosen',// 管理员用户名
     pwd: 123456,
     address: '127.0.0.1:27017',
-    db: 'blog2',
+    db: 'blog2022',
   },
 };
