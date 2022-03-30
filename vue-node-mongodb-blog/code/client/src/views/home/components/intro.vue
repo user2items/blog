@@ -1,7 +1,7 @@
 <template>
   <div class="intro-container">
     <div class="intro-box">
-      <div class="intro-title">SUM BLOG</div>
+      <div class="intro-title">屈红森的个人主页</div>
       <div class="intro-desc">
         享受编程和技术所带来的快乐 – Coding Your Ambition
       </div>

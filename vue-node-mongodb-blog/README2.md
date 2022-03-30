@@ -55,11 +55,13 @@ export default {
 
 
 
-启动服务： #### npm run server, 
+启动服务： #### npm run server,  单独启动服务还可以：
 后台管理： npm run dev:admin ， 端口号：8090
 pc: npm run dev:client, 端口号：8080
 
-服务
+服务端部署：
+
+cd code/server && node index.js
 
 
 ## 脚本命令
