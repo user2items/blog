@@ -1,6 +1,6 @@
 "use strict";
 const webpack = require("webpack");
-const path = require('path');
+const path = require("path");
 // 合并配置
 const { merge } = require("webpack-merge");
 // 配置需打包的html入口信息,并创建一个新的html文件
@@ -43,8 +43,9 @@ const dev = merge(baseConf, {
         warnings: false,
       },
     },
-    // 忽略public下文件的监听
     static: {
+      // public下就会多了一张图片，那么public文件夹就变动了，被dev-server监听到了，所以刷新页面了
+      // 然后我配的这个就是忽略监听public文件，这样public文件变动就不会被监听了，就不会刷新了
       directory: path.join(__dirname, 'public'),
       watch: false,
     },

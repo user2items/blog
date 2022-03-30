@@ -16,5 +16,4 @@ let blogSchema = db.Schema({
   likes: { type: Number, default: 0 },
   comments: { type: Number, default: 0 },
 });
-
 export default db.model("blog", blogSchema);

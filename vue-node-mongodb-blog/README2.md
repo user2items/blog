@@ -55,9 +55,10 @@ export default {
 
 
 
-启动服务： #### npm run server,  单独启动服务还可以：
-后台管理： npm run dev:admin ， 端口号：8090
-pc: npm run dev:client, 端口号：8080
+启动服务： #### npm run server,  单独启动服务还可以：172.25.88.25:3000
+后台管理： npm run dev:admin ， 端口号：8090: http://localhost:8090
+pc: npm run dev:client, 端口号：8080, http://localhost:8080
+移动端： cd code/mobile && npm run dev, 端口：http://localhost:8089
 
 服务端部署：
 

@@ -30,95 +30,24 @@ function executeStart() { // 启动 blog
 
 var express = require('express');
 var app = express();
-var routers = [];
-
-
-
+ 
 app.get('/', function (req, res) {
-    var pc_flag = true; 
     var deviceAgent = req.headers["user-agent"].toLowerCase();
     var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
     // res.send('OK');
-    // console.log('deviceAgent: ', deviceAgent)
+
+    console.log('deviceAgent: ', deviceAgent)
+
     if(agentID){
-        // console.log('请求来自手机、pad等移动端')
+        console.log('请求来自手机、pad等移动端')
         res.send('请求来自手机、pad等移动端')
-        this.pc_flag = false;
-
     }else{
-        // console.log('请求来自PC')
+        console.log('请求来自PC')
         res.send('请求来自PC')
-    }
-    
-    if (! pc_flag) { // blog-mobile
-        routers = [
-            {
-                path: '/',
-                redirect: 'http://localhost:8089/#/home'
-            },
-            {
-                path: '/ui/login',
-                name: 'mobileLogin',
-                component: mobileLogin
-            },
-            {
-                path: '/ui/index',
-                name: 'mobileIndex',
-                component: mobileIndex,
-                meta: {
-                    requireAuth: true  // 添加该字段，表示进入这个路由是需要登录的
-                },
-            }
-        ]
-    
-    } else { // blog-pc
-            routers = [
-                {
-                    path: '/',
-                    redirect: 'http://localhost:8080/#/index', // 后台：http://localhost:8080/#/index
-                },
-                {
-                    path: '/ui/login',
-                    name: 'login',
-                    component: login
-                },
-                {
-                    path: '/ui/index',
-                    name: 'index',
-                    component: index,
-                    meta:   {
-                                requireAuth: true  // 添加该字段，表示进入这个路由是需要登录的
-                            },
-                    children: [
-                            {
-                                path: '/ui/totalfloor',
-                                name: 'totalfloor',
-                                component: totalfloor,
-                                meta: {
-                                        requireAuth: true  // 添加该字段，表示进入这个路由是需要登录的
-                                    },
-                            },
-                            {
-                                path: '/ui/pointsfloor',
-                                name: 'pointsfloor',
-                                component: pointsfloor,
-                                meta: {
-                                        requireAuth: true  // 添加该字段，表示进入这个路由是需要登录的
-                                    },
-                            },    
-                        ]
-                }
-            ]
-        }
-    
-
-     
+    }       
     
 })
  
-
-
-
 var server = app.listen(8081, '127.0.0.1', function () {
     var host = server.address().address
     var port = server.address().port
@@ -127,4 +56,4 @@ var server = app.listen(8081, '127.0.0.1', function () {
 })
 
 
-executeStart() // 启动 blog
+// executeStart() // 启动 blog

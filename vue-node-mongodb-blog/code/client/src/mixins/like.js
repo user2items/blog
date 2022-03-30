@@ -4,6 +4,7 @@ import { apiUpdateLikes } from 'api/blog';
 export default {
   computed: {
     getLikesNumber({ likeList }) {
+      console.log("likeList: ", likeList);
       return (id, likes) => (likeList.includes(id) ? likes + 1 : likes);
     },
     getLikesColor({ likeList }) {

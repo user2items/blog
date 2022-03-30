@@ -52,7 +52,7 @@ export default {
       letter-spacing: 10px;
       margin-top: 0;
       margin-bottom: 0;
-      text-shadow: rgb(201, 198, 228) -1px -1px 1px,
+      text-shadow: rgb(198, 221, 228) -1px -1px 1px,
         rgb(254, 254, 255) 1px 1px 1px;
       margin-bottom: 20px;
     }

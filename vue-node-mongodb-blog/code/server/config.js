@@ -2,7 +2,7 @@ import path from 'path';
 const auth = {
   admin_secret: 'admin-token',
   tokenKey: 'Token-Auth',
-  whiteList: ['login', 'client_api'],
+  whiteList: ['login', 'client_api', 'images'],
   blackList: ['admin_api'],
 };
 
@@ -20,9 +20,9 @@ export default {
   auth,
   log,
   mongodb: {
-    username: 'qunosen',// 管理员用户名
-    pwd: 123456,
+    username: 'wall',
+    pwd: '123456',
     address: '127.0.0.1:27017',
-    db: 'blog2022',
+    db: 'test2',
   },
 };

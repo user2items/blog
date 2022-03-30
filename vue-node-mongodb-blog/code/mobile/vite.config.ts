@@ -59,6 +59,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     },
     server: {
       host: "0.0.0.0",
+      // host: "127.0.0.1",
       port: 8089, // 设置服务启动端口号
       open: true,
       cors: true, // 允许跨域
@@ -66,6 +67,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       proxy: {
         "/client_api": {
           target: "http://localhost:3000/client_api/",
+          // target: "http://127.0.0.1:3000/client_api/",
           changeOrigin: true,
           secure: false,
           rewrite: (path) => path.replace(/^\/client_api/, "/"),

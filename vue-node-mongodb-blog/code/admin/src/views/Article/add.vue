@@ -190,6 +190,7 @@ export default {
         .then((res) => {
           let { list } = res.data;
           this.labelList = list;
+          console.log("this.labelList: ", this.labelList)
         })
         .catch((err) => {
           console.log(err);

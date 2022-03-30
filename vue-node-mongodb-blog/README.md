@@ -271,9 +271,8 @@ export default {
 
 - `yarn dev:admin` // 本地开发管理端页面
 - `yarn dev:client` // 本地开发客户端页面
-- `yarn build:admin` 或者 `npm run build:admin` // 项目打包 - 管理端
-- `yarn build:client` 或者 `npm run build:client` // 项目打包 - 客户端
-- `cd ./code/mobile/ && npm run build` // 项目打包 - 移动客户端
+- `yarn build:admin` // 项目打包 - 管理端
+- `yarn build:client` // 项目打包 - 客户端
 - `yarn analyz` // 查看打包信息
 - `yarn server` // 启动后台接口服务
 

@@ -31,7 +31,7 @@ export const constantRouterMap = [
     redirect: "/home",
     icon: "home",
     children: [
-      { path: "home", component: loadComponent("Home/index"), name: "后台管理首页" },
+      { path: "home", component: loadComponent("Home/index"), name: "后台管理" },
     ],
   },
 ];

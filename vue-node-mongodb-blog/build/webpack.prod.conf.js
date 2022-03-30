@@ -21,6 +21,7 @@ const baseConf = require("./webpack.base.conf");
 // 资源路径
 const assetsPath = (dir) => {
   return path.posix.join(prodConf.assetsSubDirectory, dir);
+  
 };
 
 const prod = merge({}, baseConf, {

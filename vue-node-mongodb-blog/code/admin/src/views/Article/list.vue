@@ -207,6 +207,7 @@ export default {
         pageindex: this.pageInfo.pageNum,
         pagesize: this.pageInfo.pageSize,
       };
+      console.log("params: ", params);
       this.listLoading = true;
       return apiGetBlogList(params)
         .then((res) => {
