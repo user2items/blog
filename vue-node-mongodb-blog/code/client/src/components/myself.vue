@@ -5,11 +5,10 @@
       <img class="img-bg" src="../images/bg4.jpg" />
     </div>
     <div class="my-body">
-      <div class="my-name">wall | 苏s哈</div>
-      <div class="my-job">Web前端工程师</div>
+      <div class="my-name">I'm sum | 我是杉木 </div>
+      <div class="my-job"> Pain past is pleasure | 彩虹总在风雨后 </div>
       <div class="my-desc">
-        一个热爱篮球与前端技术的95后！20年入行，
-        热衷于研究Web前端技术，一边工作一边积累经验，分享一些自己整理的笔记和优选文章。
+        爱阅读、爱技术、爱分享的好青年 ^_^ 。
       </div>
     </div>
   </div>

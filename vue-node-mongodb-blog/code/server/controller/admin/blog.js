@@ -19,21 +19,21 @@ marked.setOptions({
 
 module.exports = {
   async list(ctx, next) {
-    console.log(
-      "----------------获取博客列表 blog/list-----------------------"
-    );
+    // console.log(
+    //   "----------------获取博客列表 blog/list-----------------------"
+    // );
     let { keyword, pageindex = 1, pagesize = 10 } = ctx.request.query;
-    console.log("ctx.request =>", ctx.request);
-    console.log(
-      "keyword:" +
-        keyword +
-        "," +
-        "pageindex:" +
-        pageindex +
-        "," +
-        "pagesize:" +
-        pagesize
-    );
+    // console.log("ctx.request =>", ctx.request);
+    // console.log(
+    //   "keyword:" +
+    //     keyword +
+    //     "," +
+    //     "pageindex:" +
+    //     pageindex +
+    //     "," +
+    //     "pagesize:" +
+    //     pagesize
+    // );
     try {
       let reg = new RegExp(keyword, "i");
       let data = await ctx.findPage(
@@ -52,7 +52,7 @@ module.exports = {
   },
 
   async add(ctx, next) {
-    console.log("----------------添加博客 blog/add-----------------------");
+    // console.log("----------------添加博客 blog/add-----------------------");
     let paramsData = ctx.request.body;
     try {
       let data = await ctx.findOne(blogModel, { title: paramsData.title });
@@ -69,7 +69,7 @@ module.exports = {
   },
 
   async update(ctx, next) {
-    console.log("----------------更新博客 blog/update-----------------------");
+    // console.log("----------------更新博客 blog/update-----------------------");
     let paramsData = ctx.request.body;
     try {
       paramsData.html = marked(paramsData.html);
@@ -87,7 +87,7 @@ module.exports = {
   },
 
   async del(ctx, next) {
-    console.log("----------------删除博客 blog/del-----------------------");
+    // console.log("----------------删除博客 blog/del-----------------------");
     let id = ctx.request.query.id;
     try {
       ctx.remove(blogModel, { _id: id });
@@ -98,9 +98,9 @@ module.exports = {
   },
 
   async info(ctx, next) {
-    console.log(
-      "----------------获取博客信息 blog/info-----------------------"
-    );
+    // console.log(
+    //   "----------------获取博客信息 blog/info-----------------------"
+    // );
     let _id = ctx.request.query._id;
     try {
       let data = await ctx.findOne(blogModel, { _id });
@@ -111,9 +111,9 @@ module.exports = {
   },
 
   async addVisitInfo(ctx, next) {// 2022-3-16添加: 将getBlogTotal信息写入数据库
-    console.log(
-      "----------------添加博客统计 pv, likes 等 信息 blog/visit-----------------------"
-    );
+    // console.log(
+    //   "----------------添加博客统计 pv, likes 等 信息 blog/visit-----------------------"
+    // );
     try {
       
       let conditions = [{
@@ -160,9 +160,9 @@ module.exports = {
   },
 
   async getVisitInfo(ctx, next) { // 返回 visit 数据库统计信息
-    console.log(
-      "----------------显示博文每日访问信息： pv, likes 等 信息 blog/visit-----------------------"
-      );
+    // console.log(
+    //   "----------------显示博文每日访问信息： pv, likes 等 信息 blog/visit-----------------------"
+    //   );
     let {pageindex = 1, pagesize = 10 } = ctx.request.query;
     try {
           let visitDat = await ctx.findPage( 

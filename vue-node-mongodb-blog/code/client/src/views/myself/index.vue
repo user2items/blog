@@ -7,47 +7,12 @@
     <div class="home-body">
       <div class="myself-main">
         <div class="main-desc">
-          <p>95后，20年入行...</p>
-          <p>福建泉州人，现居深圳...</p>
-          <p>写博客主要是为了学习，顺带分享...</p>
-          <p>目前技术水平尚浅，正在持续努力学习中...</p>
-          <p>比起编程当程序员，其实我更想当个体育老师哈哈哈...</p>
-          <p>但：“既然选择干这行，那就干下去”！将此当成一个信念，向前迈进...</p>
+          <p>北方人，现居苏州...</p>
+          <p>生物专业毕业，非科班处分，自学编程 ...</p>
+          <p>写博客主要是为了不要浪费时间打游戏、刷视频，顺边分享...</p>
         </div>
-        <img class="main-img" src="../../images/wall.jpeg" />
-        <div class="main-footer">
-          ◐ 本博客是采用 Vue2.5 + Node15.14.0 + Mongodb4.2.0
-          前后端完全分离模式来搭建。 💪 💪 💪
-          <br />
-          ◒ 目前该博客有三个版本：当前线上的 Vue2.5 PC版本、Vue3.2
-          移动端版本、React17.0（Hooks）移动端版本。
-          后续应该会再写个小程序版本（技术选型未定，可留言建议），请敬请期待！！！🌟
-          🌟 🌟
-          <br />
-          ◓ 三个版本皆已开源，源码已上传到 GitHub，具体的技术栈可在 GitHub
-          上了解。如果觉得该系列的博客对学习有帮助的，希望能给博主点个
-          Star，以资鼓励！在此感谢各位国家栋梁的支持！！！ 🙏 🙏 🙏
-          <br />
-          ◑
-          项目中如果有存在设计不合理的地方或有不清楚的地方，欢迎邮箱、微信来信交流。&nbsp;
-          🤩 🤩 🤩
-          <br />
-          1. Vue2 Node PC 版本仓库地址：<a
-            href="https://github.com/Sujb-sus/wallBlog"
-            target="_blank"
-            >https://github.com/Sujb-sus/wallBlog</a
-          ><br />
-          2. Vue3 Vite2 H5 版本仓库地址：<a
-            href="https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5"
-            target="_blank"
-            >https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5</a
-          ><br />
-          3. React Hooks H5 版本仓库地址：<a
-            href="https://github.com/Sujb-sus/react-hooks-blog-h5"
-            target="_blank"
-            >https://github.com/Sujb-sus/react-hooks-blog-h5</a
-          >
-        </div>
+        <img class="main-img" src="../../images/sum.jpg" />
+        
       </div>
       <div class="side-main">
         <div class="side-wrapper">
@@ -55,10 +20,9 @@
             <img src="../../images/avatar.png" class="avatar" alt="" />
           </div>
           <div class="side-content">
-            <div class="content-item">网名：苏s哈 | wall</div>
-            <div class="content-item">职业：Web前端工程师</div>
-            <div class="content-item">邮箱：sujb8540@163.com</div>
-            <div class="content-item">个人微信：SJB854067626</div>
+            <div class="content-item">网名：杉木 | sum</div>
+            <div class="content-item">QQ：2191306335</div>
+            <div class="content-item">邮箱：sunny4390110@163.com</div>
           </div>
         </div>
         <div class="side-wrapper">
@@ -67,7 +31,7 @@
             个人微信
           </div>
           <div class="side-img">
-            <img src="../../images/qrcode.jpg" class="qrcode" alt="" />
+            <img src="../../images/wx.png" class="qrcode" alt="" />
           </div>
         </div>
       </div>

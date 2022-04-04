@@ -1,8 +1,6 @@
 
 var exec = require('child_process').exec;
 
-// 参考： https://www.cnblogs.com/vaelcy/p/10294405.html
-
 function executeCommand(cmd){ // 执行命令
     exec(cmd, function(error, stdout, stderr) {
         if(error){

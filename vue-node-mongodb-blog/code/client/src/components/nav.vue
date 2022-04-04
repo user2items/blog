@@ -1,7 +1,7 @@
 <template>
   <div class="nav-wrapper" :class="{ 'not-nav': showNav }" ref="header">
     <nav>
-      <img src="../images/logo.png" alt="WallBlog" />
+      <img src="../images/logo.png" alt="sumBlog" />
       <ul>
         <li
           v-for="(item, index) in navList"

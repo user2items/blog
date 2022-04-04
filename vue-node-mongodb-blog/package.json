@@ -1,7 +1,7 @@
 {
-  "name": "wall-blog",
+  "name": "sum-blog",
   "version": "1.0.0",
-  "author": "wall",
+  "author": "sum",
   "description": "A blog website sharing front-end technology",
   "keywords": [
     "vue",

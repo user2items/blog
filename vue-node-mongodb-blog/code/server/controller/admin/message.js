@@ -2,9 +2,9 @@ import messageModel from '../../models/message';
 
 module.exports = {
   async list(ctx, next) {
-    console.log(
-      '----------------获取留言列表 admin_api/message/list-----------------------'
-    );
+    // console.log(
+    //   '----------------获取留言列表 admin_api/message/list-----------------------'
+    // );
     let { keyword, pageindex = 1, pagesize = 10 } = ctx.request.query;
 
     let reg = new RegExp(keyword, 'i');
@@ -34,9 +34,9 @@ module.exports = {
   },
 
   async del(ctx, next) {
-    console.log(
-      '----------------删除留言 admin_api/message/del-----------------------'
-    );
+    // console.log(
+    //   '----------------删除留言 admin_api/message/del-----------------------'
+    // );
     let id = ctx.request.query.id;
     try {
       ctx.remove(messageModel, { _id: id });
@@ -47,9 +47,9 @@ module.exports = {
   },
 
   async delReply(ctx, next) {
-    console.log(
-      '----------------删除回复 admin_api/message/delReply-----------------------'
-    );
+    // console.log(
+    //   '----------------删除回复 admin_api/message/delReply-----------------------'
+    // );
     let { _id } = ctx.request.body;
     let options = {
       $pull: { replyList: { _id } },

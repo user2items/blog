@@ -2,7 +2,7 @@ import messageModel from '../../models/message';
 
 module.exports = {
   async add(ctx, next) {
-    console.log('----------------添加留言 message/add-----------------------');
+    // console.log('----------------添加留言 message/add-----------------------');
     let paramsData = ctx.request.body;
     if (!paramsData.nickname) {
       paramsData.nickname = '匿名网友';
@@ -16,9 +16,9 @@ module.exports = {
   },
 
   async list(ctx, next) {
-    console.log(
-      '----------------获取评论列表 client_api/message/list-----------------------'
-    );
+    // console.log(
+    //   '----------------获取评论列表 client_api/message/list-----------------------'
+    // );
     let { pageindex = 1, pagesize = 10 } = ctx.request.query;
 
     // 排序参数
@@ -42,9 +42,9 @@ module.exports = {
   },
 
   async replyCount(ctx, next) {
-    console.log(
-      '----------------获取回复列表 client_api/message/replyCount-----------------------'
-    );
+    // console.log(
+    //   '----------------获取回复列表 client_api/message/replyCount-----------------------'
+    // );
     let conditions = [
       { $project: { replyCount: { $size: '$replyList' } } },
       { $group: { _id: null, replyCount: { $sum: '$replyCount' } } },
@@ -59,9 +59,9 @@ module.exports = {
   },
 
   async updateLikes(ctx, next) {
-    console.log(
-      '----------------点赞留言 client_api/message/updateLikes------------------'
-    );
+    // console.log(
+    //   '----------------点赞留言 client_api/message/updateLikes------------------'
+    // );
     let paramsData = ctx.request.body;
     let num = JSON.parse(paramsData.isLike) ? -1 : 1;
     let options = { $inc: { likes: num } };
@@ -78,9 +78,9 @@ module.exports = {
   },
 
   async updateReplys(ctx, next) {
-    console.log(
-      '----------------回复留言 client_api/message/updateReplys------------------'
-    );
+    // console.log(
+    //   '----------------回复留言 client_api/message/updateReplys------------------'
+    // );
     let paramsData = ctx.request.body;
     if (!paramsData.replyUser) {
       paramsData.replyUser = '匿名网友';

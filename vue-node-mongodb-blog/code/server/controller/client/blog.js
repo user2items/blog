@@ -2,9 +2,9 @@ import blogModel from '../../models/blog';
 
 module.exports = {
   async list(ctx, next) {
-    console.log(
-      '----------------获取博客列表 client_api/blog/list-----------------------'
-    );
+    // console.log(
+    //   '----------------获取博客列表 client_api/blog/list-----------------------'
+    // );
     let {
       keyword = null,
       isQuery = null,
@@ -61,9 +61,9 @@ module.exports = {
   },
 
   async info(ctx, next) {
-    console.log(
-      '----------------获取博客信息 client_api/blog/info-----------------------'
-    );
+    // console.log(
+    //   '----------------获取博客信息 client_api/blog/info-----------------------'
+    // );
     let _id = ctx.request.query._id;
     try {
       let data = await ctx.findOne(blogModel, { _id });
@@ -74,9 +74,9 @@ module.exports = {
   },
 
   async updateLikes(ctx, next) {
-    console.log(
-      '----------------点赞文章 client_api/blog/updateLikes------------------'
-    );
+    // console.log(
+    //   '----------------点赞文章 client_api/blog/updateLikes------------------'
+    // );
     let paramsData = ctx.request.body;
     let num = JSON.parse(paramsData.isLike) ? -1 : 1;
     let options = { $inc: { likes: num } };
@@ -89,9 +89,9 @@ module.exports = {
   },
 
   async updatePV(ctx, next) {
-    console.log(
-      '----------------文章浏览量 client_api/blog/updatePV------------------'
-    );
+    // console.log(
+    //   '----------------文章浏览量 client_api/blog/updatePV------------------'
+    // );
     let paramsData = ctx.request.body;
     let options = { $inc: { pv: 1 } };
     try {

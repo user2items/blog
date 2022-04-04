@@ -2,9 +2,9 @@ import labelModel from "../../models/label";
 
 module.exports = {
   async list(ctx, next) {
-    console.log(
-      "----------------获取标签列表 label/list-----------------------"
-    );
+    // console.log(
+    //   "----------------获取标签列表 label/list-----------------------"
+    // );
     let { keyword, pageindex = 1, pagesize = 50 } = ctx.request.query;
     try {
       let reg = new RegExp(keyword, "i");
@@ -24,7 +24,7 @@ module.exports = {
   },
 
   async add(ctx, next) {
-    console.log("----------------添加标签 label/add-----------------------");
+    // console.log("----------------添加标签 label/add-----------------------");
     let paramsData = ctx.request.body;
     try {
       let data = await ctx.findOne(labelModel, { label: paramsData.label });
@@ -40,7 +40,7 @@ module.exports = {
   },
 
   async update(ctx, next) {
-    console.log("----------------更新标签 label/update-----------------------");
+    // console.log("----------------更新标签 label/update-----------------------");
     let paramsData = ctx.request.body;
     try {
       let data = await ctx.update(
@@ -57,7 +57,7 @@ module.exports = {
   },
 
   async del(ctx, next) {
-    console.log("----------------删除标签 label/del-----------------------");
+    // console.log("----------------删除标签 label/del-----------------------");
     let id = ctx.request.query.id;
     try {
       let data = await ctx.remove(labelModel, { _id: id });

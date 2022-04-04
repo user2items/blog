@@ -3,7 +3,7 @@ import conf from "../../config";
 import userModel from "../../models/user";
 module.exports = {
   async login(ctx, next) {
-    console.log("----------------登录接口 user/login-----------------------");
+    // console.log("----------------登录接口 user/login-----------------------");
     let { username, pwd } = ctx.request.body;
     try {
       let data = await ctx.findOne(userModel, { username: username });
@@ -44,9 +44,9 @@ module.exports = {
     }
   },
   async info(ctx, next) {
-    console.log(
-      "----------------获取用户信息接口 user/getUserInfo-----------------------"
-    );
+    // console.log(
+    //   "----------------获取用户信息接口 user/getUserInfo-----------------------"
+    // );
     let token = ctx.request.query.token;
     try {
       let tokenInfo = jwt.verify(token, conf.auth.admin_secret);
@@ -67,20 +67,20 @@ module.exports = {
   },
 
   async list(ctx, next) {
-    console.log(
-      "----------------获取用户信息列表接口 user/getUserList-----------------------"
-    );
+    // console.log(
+    //   "----------------获取用户信息列表接口 user/getUserList-----------------------"
+    // );
     let { keyword, pageindex = 1, pagesize = 10 } = ctx.request.query;
-    console.log(
-      "keyword:" +
-        keyword +
-        "," +
-        "pageindex:" +
-        pageindex +
-        "," +
-        "pagesize:" +
-        pagesize
-    );
+    // console.log(
+    //   "keyword:" +
+    //     keyword +
+    //     "," +
+    //     "pageindex:" +
+    //     pageindex +
+    //     "," +
+    //     "pagesize:" +
+    //     pagesize
+    // );
 
     try {
       let reg = new RegExp(keyword, "i");
@@ -101,7 +101,7 @@ module.exports = {
   },
 
   async add(ctx, next) {
-    console.log("----------------添加管理员 user/add-----------------------");
+    // console.log("----------------添加管理员 user/add-----------------------");
     let paramsData = ctx.request.body;
     try {
       let data = await ctx.findOne(userModel, {
@@ -119,9 +119,9 @@ module.exports = {
   },
 
   async update(ctx, next) {
-    console.log(
-      "----------------更新管理员 user/update-----------------------"
-    );
+    // console.log(
+    //   "----------------更新管理员 user/update-----------------------"
+    // );
     let paramsData = ctx.request.body;
     console.log(paramsData);
     try {
@@ -142,7 +142,7 @@ module.exports = {
   },
 
   async del(ctx, next) {
-    console.log("----------------删除管理员 user/del-----------------------");
+    // console.log("----------------删除管理员 user/del-----------------------");
     let id = ctx.request.query.id;
     try {
       ctx.remove(userModel, { _id: id });

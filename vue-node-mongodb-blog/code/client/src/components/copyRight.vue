@@ -1,9 +1,9 @@
 <template>
   <div class="copyright-wrapper">
     <span
-      >Copyright © www.rasblog.com All rights reserved.<br />
+      >Copyright © www.infersite.com All rights reserved.<br />
       备案号：<a href="https://beian.miit.gov.cn/" target="_blank"
-        >粤ICP备2021121326号</a
+        >苏ICP备2022007711号</a
       ></span
     >
   </div>

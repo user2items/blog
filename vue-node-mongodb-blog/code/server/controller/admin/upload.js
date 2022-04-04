@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   async uploadImage(ctx, next) {
-    console.log("----------------添加图片 uploadImage-----------------------");
+    // console.log("----------------添加图片 uploadImage-----------------------");
     try {
       let opts = {
         path: path.resolve(__dirname, "../../../../public"),
@@ -14,9 +14,9 @@ module.exports = {
     }
   },
   async delUploadImage(ctx, next) {
-    console.log(
-      "----------------删除图片 delUploadImage-----------------------"
-    );
+    // console.log(
+    //   "----------------删除图片 delUploadImage-----------------------"
+    // );
     let fileName = ctx.request.body.fileName;
     let fileCoverImgUrl = `public/images/${fileName}`;
     try {

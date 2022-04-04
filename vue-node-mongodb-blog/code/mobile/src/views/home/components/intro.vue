@@ -1,7 +1,7 @@
 <template>
   <div class="intro-container">
     <div class="intro-box">
-      <div class="intro-title">WALL-BLOG</div>
+      <div class="intro-title">sum blog</div>
       <div class="intro-desc">
         享受编程和技术所带来的快乐<br />Coding Your Ambition
       </div>
