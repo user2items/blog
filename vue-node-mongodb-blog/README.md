@@ -91,4 +91,4 @@ sum blog mobile：http://localhost:8089
 
   如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
-  交流讨论：**[sum-blog](http://www.infersite.com/)** 。
+  交流讨论：**[sum-blog](http://www.infersite.com/)** 。或 paperClub微信公众号
